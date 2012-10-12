@@ -15,12 +15,6 @@
 	<property name="tmp.basedir" value="${tmp.dir}/${jar.name}-${project.version}-jar"/>
 	<property name="tmp.build.dir" value="${tmp.basedir}/${build.id}"/>
 	<property name="tmp.classes.dir" value="${tmp.build.dir}/classes"/>
-
-    <path id="project.classpath">
-        <fileset dir="${jar.javac.lib.dir}">
-            <include name="slf4j-api-1.7.1.jar"/>
-        </fileset>
-    </path>
 	
 	<target name="show-config">
 		<echo level="info" message="tmp.build.dir=${tmp.build.dir}"/>
@@ -45,8 +39,7 @@
     	  optimize="true" deprecation="true" encoding="UTF-8" includeantruntime="false"
           destdir="${tmp.classes.dir}" debug="${jar.javac.debug}" 
 		  target="${jar.javac.target}" source="${jar.javac.source}" bootclasspath="${jar.javac.bootclasspath}">			
-			<src path="${tmp.classes.dir}" />
-			<classpath refid="project.classpath"/>			
+			<src path="${tmp.classes.dir}" />			
 		</javac>
 	</target>
 
