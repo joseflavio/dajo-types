@@ -13,5 +13,5 @@ public class BooleanConverter {
             throw new RuntimeException("Invalid value. value=" + value);
         }
     }
-    
+
 }

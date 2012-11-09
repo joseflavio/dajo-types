@@ -9,7 +9,7 @@ public class StringParserUtil {
                 return result.getParsedValue();
             }
         } catch (Exception e) {
-        	// It is a safe implementation, should never cause exceptions
+            // It is a safe implementation, should never cause exceptions
         }
         return defaultValue;
     }
@@ -21,7 +21,7 @@ public class StringParserUtil {
                 return result;
             }
         } catch (Exception e) {
-        	// It is a safe implementation, should never cause exceptions
+            // It is a safe implementation, should never cause exceptions
         }
         return new ParsedContainer<T>();
     }
