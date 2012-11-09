@@ -1,6 +1,5 @@
 package org.dajo.types.stringparser;
 
-
 public class ParsedContainer<T> {
 
     private final boolean available;
