@@ -1,6 +1,5 @@
 package org.dajo.types;
 
-
 public final class IntegerAdapter implements TypeAdapter<Integer, String> {
 
     @Override
