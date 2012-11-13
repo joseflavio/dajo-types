@@ -1,5 +1,7 @@
 pidgin      | sudo apt-get install pidgin
 
+virtualbox  | sudo apt-get install virtualbox-qt
+
 vim
 git ?"
 cvs ?
