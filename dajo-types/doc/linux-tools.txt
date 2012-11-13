@@ -1,5 +1,6 @@
 pidgin      | sudo apt-get install pidgin
 
+vim
 git ?"
 cvs ?
 parallel ?
@@ -7,6 +8,7 @@ parallel ?
 curl
 wget
 nmap
+vlc
 
 g++         | sudo apt-get install g++
 valgrind    | sudo apt-get install valgrind
