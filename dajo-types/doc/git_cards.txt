@@ -1,0 +1,25 @@
+git clean -x -f -d // Clean your working tree, removes files under gitignore and directories
+
+git branch -v -v
+git pull -rebase
+
+
+##
+git checkout -t origin/taskbranch/citytaxes3 // Checkout a remote branch keeping the same name
+
+# Creates a local branch in the remote
+git checkout -b jaguilarpaulino/tasks/rai2 taskbranch/citytaxes3
+git push --set-upstream origin jaguilarpaulino/tasks/rai2 
+
+
+
+
+
+git rebase taskbranch/citytaxes3 
+git rebase --continue
+
+git reset --hard @{upstream}
+
+git config --global user.name "Jose-Flavio AGUILAR PAULINO"
+git config --global user.email "jose-flavio.aguilarpaulino@amadeus.com"
+git config push.default upstream // Configure to push JUST the cuurent branch to upstream, to avoid to push ALL branchs to remote, important in FORCE pushes

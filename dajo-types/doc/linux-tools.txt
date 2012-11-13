@@ -1,0 +1,8 @@
+g++         | sudo apt-get install g++
+fortune     | sudo apt-get install fortunes
+perf        | sudo apt-get install linux-tools-3.2.0  linux-tools-common linux-base
+javac       | sudo apt-get install openjdk-7-jdk
+ipython     | sudo apt-get install ipython
+rdesktop    |sudo apt-get install rdesktop
+
+likwid      | likwid-topology_2.0-1_amd64.deb
