@@ -1,5 +1,13 @@
 pidgin      | sudo apt-get install pidgin
 
+git ?"
+cvs ?
+parallel ?
+
+curl
+wget
+nmap
+
 g++         | sudo apt-get install g++
 
 
