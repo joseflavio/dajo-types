@@ -9,7 +9,7 @@ wget
 nmap
 
 g++         | sudo apt-get install g++
-
+valgrind    | sudo apt-get install valgrind
 
 fortune     | sudo apt-get install fortunes
 fortune     | sudo apt-get install fortunes-br
