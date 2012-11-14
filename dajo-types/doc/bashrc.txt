@@ -1,1 +1,12 @@
+alias ll='ls --color -l'
+alias la='ls --color -la'  
 alias ls="ls -alH --color"
+
+export PS1='%* %n@%m:%~) '
+export GREP_COLOR='1;37;41'
+export GREP_OPTIONS='--color=auto'
+
+export DISPLAY=mymahine.net:0.0
+
+
+

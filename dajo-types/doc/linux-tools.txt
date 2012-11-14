@@ -1,34 +1,33 @@
-pidgin      | sudo apt-get install pidgin
-
-virtualbox  | sudo apt-get install virtualbox-qt
-
-vim
-git ?"
-cvs ?
-parallel ?
-
 curl
 wget
-nmap
-vlc
 
-g++         | sudo apt-get install g++
-valgrind    | sudo apt-get install valgrind
+vim             | sudo apt-get install vim
+pidgin          | sudo apt-get install pidgin
+vlc             | sudo apt-get install vlc (vlc-nox?)
+javac           | sudo apt-get install openjdk-7-jdk
+ipython         | sudo apt-get install ipython
+rdesktop        | sudo apt-get install rdesktop
+chrome          | google-chrome-stable_current_i386.deb
 
-fortune     | sudo apt-get install fortunes
-fortune     | sudo apt-get install fortunes-br
-fortune     | sudo apt-get install fortunes-debian-hints
-fortunes-off
-fortunes-pl
+fortune         | sudo apt-get install fortunes
+fortune         | sudo apt-get install fortunes-br
+fortune         | sudo apt-get install fortunes-debian-hints
+fortunes-off    | sudo apt-get install fortunes-off
+fortunes-pl     |
 
+parallel        | sudo apt-get install moreutils
+virtualbox      | sudo apt-get install virtualbox-qt
+iotop           | sudo apt-get install iotop
+blktrace        | sudo apt-get install blktrace
+perf            | sudo apt-get install linux-tools-3.2.0  linux-tools-common linux-base
+likwid          | likwid-topology_2.0-1_amd64.deb
+nmap            | 
 
-
-perf        | sudo apt-get install linux-tools-3.2.0  linux-tools-common linux-base
-javac       | sudo apt-get install openjdk-7-jdk
-ipython     | sudo apt-get install ipython
-rdesktop    | sudo apt-get install rdesktop
-
-chrome      | google-chrome-stable_current_i386.deb
-likwid      | likwid-topology_2.0-1_amd64.deb
-
+cvs             | sudo apt-get install cvs
+g++             | sudo apt-get install g++
+git             | sudo apt-get install blktrace
+valgrind        | sudo apt-get install valgrind
 golang      | go1.0.3.linux-386.tar.gz - http://code.google.com/p/go/downloads/list
+
+
+
