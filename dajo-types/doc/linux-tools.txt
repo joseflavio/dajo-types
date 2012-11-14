@@ -2,6 +2,7 @@ curl
 wget
 
 vim             | sudo apt-get install vim
+htop            | sudo apt-get install htop
 pidgin          | sudo apt-get install pidgin
 vlc             | sudo apt-get install vlc (vlc-nox?)
 javac           | sudo apt-get install openjdk-7-jdk
@@ -14,6 +15,9 @@ fortune         | sudo apt-get install fortunes-br
 fortune         | sudo apt-get install fortunes-debian-hints
 fortunes-off    | sudo apt-get install fortunes-off
 fortunes-pl     |
+
+
+ncurses-dev     | sudo apt-get install libncurses5-dev
 
 parallel        | sudo apt-get install moreutils
 virtualbox      | sudo apt-get install virtualbox-qt
