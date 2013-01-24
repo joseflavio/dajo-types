@@ -1,37 +1,39 @@
 curl
 wget
 
-vim             | sudo apt-get install vim
-htop            | sudo apt-get install htop
-pidgin          | sudo apt-get install pidgin
-vlc             | sudo apt-get install vlc (vlc-nox?)
-javac           | sudo apt-get install openjdk-7-jdk
-ipython         | sudo apt-get install ipython
-rdesktop        | sudo apt-get install rdesktop
-chrome          | google-chrome-stable_current_i386.deb
+vim
+htop
+pidgin
+vlc
 
-fortune         | sudo apt-get install fortunes
-fortune         | sudo apt-get install fortunes-br
-fortune         | sudo apt-get install fortunes-debian-hints
-fortunes-off    | sudo apt-get install fortunes-off
-fortunes-pl     |
+ipython
+rdesktop
+iotop
+blktrace
 
+valgrind
+cvs
+g++
 
-ncurses-dev     | sudo apt-get install libncurses5-dev
+moreutils               (parallel)
+linux-tools-3.2.0  linux-tools-common linux-base (perf?)
 
-parallel        | sudo apt-get install moreutils
-virtualbox      | sudo apt-get install virtualbox-qt
-iotop           | sudo apt-get install iotop
-blktrace        | sudo apt-get install blktrace
-perf            | sudo apt-get install linux-tools-3.2.0  linux-tools-common linux-base
-likwid          | likwid-topology_2.0-1_amd64.deb
-nmap            | 
+openjdk-7-jdk               (javac/java)
 
-cvs             | sudo apt-get install cvs
-g++             | sudo apt-get install g++
+fortunes
+fortunes-br
+fortunes-debian-hints
+fortunes-off
+
+virtualbox-qt
+
 git             | sudo apt-get install blktrace
-valgrind        | sudo apt-get install valgrind
-golang      | go1.0.3.linux-386.tar.gz - http://code.google.com/p/go/downloads/list
 
+likwid          | likwid-topology_2.0-1_amd64.deb
+libncurses5-dev             (ncurses-dev)
+chrome
+golang
+
+sudo apt-get install wget curl fortunes htop vim openjdk-7-jdk iotop
 
 

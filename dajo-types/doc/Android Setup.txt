@@ -1,0 +1,3 @@
+Android Sources: http://adt-addons.googlecode.com/svn/trunk/source/com.android.ide.eclipse.source.update/
+
+
