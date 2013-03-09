@@ -1,4 +1,4 @@
-package org.dajo.tasks;
+package org.dajo.types.chronometer;
 
 public interface NamedTask<N,R,I> {
 

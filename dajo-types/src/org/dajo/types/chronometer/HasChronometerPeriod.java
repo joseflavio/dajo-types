@@ -1,4 +1,4 @@
-package org.dajo.chronometer;
+package org.dajo.types.chronometer;
 
 public interface HasChronometerPeriod {
 
