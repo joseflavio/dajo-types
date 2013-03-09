@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="dajo-types-gwt" default="gwtc" basedir=".">
+
+    <property name="gwt.sdk" value="D:/Java/gwt-2.5.0"/>
+    <path id="project.class.path">
+        <pathelement location="${gwt.sdk}/gwt-user.jar"/>
+        <fileset dir="${gwt.sdk}" includes="gwt-dev*.jar"/>
+        <!-- Add any additional non-server libs (such as JUnit) -->
+        <!-- <fileset dir="war/WEB-INF/lib" includes="**/*.jar"/> -->
+    </path>
+
+    <target name="gwtc" description="GWT compile to JavaScript">
+        <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+            <classpath>
+                <pathelement location="src"/>
+                <path refid="project.class.path"/>
+            </classpath>
+            <!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
+            <jvmarg value="-Xmx512M"/>
+            <arg value="org.dajo.DajoTypes"/> <!-- Should be the last -->
+            <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+            
+            <arg value="-war"/>
+            <arg value="tmp/war"/>
+            <!-- <arg value="-strict"/> -->
+            <arg value="-XdisableCastChecking"/>
+            <arg value="-XdisableClassMetadata"/>
+            
+        </java>
+    </target>
+
+</project>

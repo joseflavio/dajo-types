@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+
+<module rename-to="DajoTypes">
+
+    <inherits name="com.google.gwt.user.User" />
+<inherits name="javax.validation.Validation"/>
+
+    <source path="types"/>
+
+</module>
