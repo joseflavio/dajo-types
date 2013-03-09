@@ -20,12 +20,9 @@
             
             <arg value="org.dajo.DajoTypes"/>
 
-            <!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
-
             <arg value="-logLevel"/>
             <arg value="INFO"/>
 
-        	
             <arg value="-war"/>
             <arg value="tmp/war"/>
 
