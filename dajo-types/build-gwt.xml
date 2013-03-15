@@ -2,10 +2,10 @@
 <!DOCTYPE project>
 <project name="dajo-types-gwt" default="gwtc" basedir=".">
 
-    <property name="gwt.sdk" value="D:/Java/gwt-2.5.0"/>
+    <property name="gwt.sdk.dir" value="D:/Java/gwt-2.5.0"/>
 
     <path id="project.class.path">
-        <fileset dir="${gwt.sdk}" includes="*.jar"/>
+        <fileset dir="${gwt.sdk.dir}" includes="*.jar"/>
     </path>
 
     <target name="gwtc" description="GWT compile to JavaScript">
