@@ -1,8 +1,8 @@
 package org.dajo.types.chronometer;
 
-public interface NamedTask<N,R,I> {
+public interface DajoTask<N,R,I> {
 
-    N getTaskName();
+    N getTaskId();
 
     R execute(I executorInput);
 

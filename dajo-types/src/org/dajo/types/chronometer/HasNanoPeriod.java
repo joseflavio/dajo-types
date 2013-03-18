@@ -1,6 +1,6 @@
 package org.dajo.types.chronometer;
 
-public interface HasChronometerPeriod {
+public interface HasNanoPeriod {
 
     double getElapsedTimeInNanos();
 
