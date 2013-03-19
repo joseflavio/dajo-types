@@ -1,2 +1,4 @@
+tmp.dir=D:/TEMP/tmp_gwt
+jar.javac.bootclasspath16=D:/Java/jdk1.6.0_43/jre/lib/rt.jar
 #tmp.dir=R:/tmp_build
 #tmp.dir=/dev/shm/tmp_build
