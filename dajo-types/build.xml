@@ -20,7 +20,7 @@
     </tstamp>
 
     <!-- Derivated properties -->
-    <property name="tmp.build.dir" value="${tmp.dir}/${jar.name}-${project.version}-jar/${build.id}"/>
+    <property name="tmp.build.dir" value="${tmp.dir}/${ant.project.name}-${project.version}-jar/${build.id}"/>
     <property name="tmp.classes.dir" value="${tmp.build.dir}/classes"/>
 
     <target name="show-config">
@@ -40,11 +40,11 @@
         </copy>
     </target>
 
-    <target name="compile" depends="copy-sources">
+    <target name="compile-java" depends="copy-sources">
         <javac
           optimize="true" deprecation="true" encoding="UTF-8" includeantruntime="false"
-          destdir="${tmp.classes.dir}" debug="${jar.javac.debug}"
-          target="${jar.javac.target}" source="${jar.javac.source}" bootclasspath="${jar.javac.bootclasspath16}">
+          destdir="${tmp.classes.dir}" debug="${javac.debug}"
+          target="${javac.target}" source="${javac.source}" bootclasspath="${javac.bootclasspath16}">
             <src path="${tmp.classes.dir}" />
         </javac>
     </target>
@@ -55,7 +55,7 @@
         </antcall>
     </target>
 
-    <target name="build-external" depends="compile">
+    <target name="build-external" depends="compile-java">
 
         <fail message="Missing mandatory property.">
             <condition>
