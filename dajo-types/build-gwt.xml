@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project>
-<project name="dajo-types-gwt" default="gwtc" basedir=".">
+<project name="dajo-types-gwt" default="compile-gwt" basedir=".">
 
-    <property name="gwt.sdk.dir" value="D:/Java/gwt-2.5.0"/>
+    <property file="version.properties"/>
+    <property file="build.local.properties"/>
+    
+    <!-- for default value -->
+    <property name="tmp.dir" value="tmp"/>
+    <property name="gwt.sdk.dir" value="C:/Java/gwt-2.5.1"/>
 
+    <!-- Dynamic properties -->
+    <buildnumber file="${ant.project.name}.number"/>
+    <tstamp>
+        <format property="build.timeid" pattern="yyyyMMdd-hhmmss" timezone="UTC"/>
+    </tstamp>
+    <property name="build.id" value="${build.number}-${build.timeid}"/>
+    <tstamp>
+        <format property="jar.manifest.builtdate" pattern="yyyy-MM-dd HH:mm:ss" />
+    </tstamp>
+
+    <!-- Derivated properties -->
+    <property name="tmp.build.dir" value="${tmp.dir}/${ant.project.name}-${project.version}/${build.id}"/>
+    
     <path id="project.class.path">
         <fileset dir="${gwt.sdk.dir}" includes="*.jar"/>
     </path>
 
-    <target name="gwtc" description="GWT compile to JavaScript">
+    <target name="compile-gwt" description="GWT compile to JavaScript">
         <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
             <classpath>
                 <pathelement location="src"/>
@@ -24,10 +42,10 @@
             <arg value="INFO"/>
 
             <arg value="-war"/>
-            <arg value="tmp/war"/>
+            <arg value="${tmp.build.dir}/war"/>
 
             <arg value="-deploy"/>
-            <arg value="tmp/gwt-deploy"/>
+            <arg value="${tmp.build.dir}/gwt-deploy"/>
        
             <arg value="-optimize"/>
             <arg value="9"/>
