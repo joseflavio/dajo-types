@@ -1,15 +1,9 @@
-/**
- * @author Jose Flavio Aguilar Paulino
- */
 package org.dajo.types.collections;
 
 import java.util.Collection;
 import java.util.HashMap;
 
-/**
- * @author Jose Flavio Aguilar Paulino
- */
-public final class HashMap2<K,V> implements Map2<K,V> {
+public final class HashMap2<K, V> implements Map2<K, V> {
 
     private final HashMap<K, V> hashMap;
 
@@ -31,6 +25,7 @@ public final class HashMap2<K,V> implements Map2<K,V> {
     public Collection<V> values() {
         return hashMap.values();
     }
+
     @Override
     public void put(final K key, final V value) {
         hashMap.put(key, value);
