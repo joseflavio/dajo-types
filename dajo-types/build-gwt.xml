@@ -15,14 +15,11 @@
         <format property="build.timeid" pattern="yyyyMMdd-hhmmss" timezone="UTC"/>
     </tstamp>
     <property name="build.id" value="${build.number}-${build.timeid}"/>
-    <tstamp>
-        <format property="jar.manifest.builtdate" pattern="yyyy-MM-dd HH:mm:ss" />
-    </tstamp>
 
     <!-- Derivated properties -->
     <property name="tmp.build.dir" value="${tmp.dir}/${ant.project.name}-${project.version}/${build.id}"/>
     
-    <path id="project.class.path">
+    <path id="gwt.classpath">
         <fileset dir="${gwt.sdk.dir}" includes="*.jar"/>
     </path>
 
@@ -30,7 +27,7 @@
         <java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
             <classpath>
                 <pathelement location="src"/>
-                <path refid="project.class.path"/>
+                <path refid="gwt.classpath"/>
             </classpath>
             
             <jvmarg value="-Xss16M"/> <!-- -Xss16M or similar if you see a StackOverflowError -->
