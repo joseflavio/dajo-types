@@ -1,4 +1,4 @@
-package org.dajo.types;
+package org.dajo.types.collections;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class MapOfLists<K,E> {
+public class MultiMap<K,E> {
 
     final HashMap<K, List<E>> map = new HashMap<K, List<E>>();
 
