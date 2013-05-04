@@ -9,3 +9,9 @@ grep
 python
 sa
 apr
+entregadores
+temp
+gwt
+kitlocaliza
+int
+secs
