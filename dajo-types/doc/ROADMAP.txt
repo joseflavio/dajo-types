@@ -1,0 +1,8 @@
+Maybe with Java 8 we will have the following annotations: 
+
+import javax.validation.constraints.NotNull
+import javax.annotation.CheckForNull;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
+
