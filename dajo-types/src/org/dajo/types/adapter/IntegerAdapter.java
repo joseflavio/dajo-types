@@ -1,16 +1,17 @@
 package org.dajo.types.adapter;
 
-import org.dajo.types.ValidatedReturn;
+import org.dajo.types.Function;
+import org.dajo.types.Optional;
 
-public final class IntegerAdapter implements TypeAdapter<Integer, String> {
+public final class IntegerAdapter implements Function<String, Optional<Integer>> {
 
     @Override
-    public ValidatedReturn<Integer> adapt(final String value) {
+    public Optional<Integer> apply(final String value) {
         try {
             int intValue = Integer.parseInt(value);
-            return new ValidatedReturn<Integer>(Integer.valueOf(intValue));
+            return Optional.of(Integer.valueOf(intValue));
         } catch (NumberFormatException e) {
-            return new ValidatedReturn<Integer>();
+            return Optional.absent();
         }
     }
 

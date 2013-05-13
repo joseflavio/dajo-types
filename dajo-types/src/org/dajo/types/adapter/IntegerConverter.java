@@ -1,4 +1,4 @@
-package org.dajo.types;
+package org.dajo.types.adapter;
 
 public final class IntegerConverter {
 
