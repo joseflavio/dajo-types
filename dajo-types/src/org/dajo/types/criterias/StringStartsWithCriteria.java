@@ -1,4 +1,4 @@
-package org.dajo.types;
+package org.dajo.types.criterias;
 
 import org.dajo.types.collections.MatchCriteria;
 

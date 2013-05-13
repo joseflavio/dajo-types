@@ -1,7 +1,7 @@
 package org.dajo.types;
 
-public interface HashProvider<K,E> {
+public interface HashProvider<H, I> {
 
-    K calculateHash(E e);
+    H hash(I e);
 
 }

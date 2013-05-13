@@ -1,43 +1,61 @@
 package org.dajo.types;
 
-public final class Optional<T> {
+public abstract class Optional<T> {
 
     static public <O> Optional<O> of(final O object) {
-        return new Optional<O>(object);
+        checkNotNull(object);
+        return new Present<O>(object);
     }
 
+    @SuppressWarnings("unchecked")
+    static public <O> Optional<O> fromNullable(final O object) {
+        return object != null ? new Present<O>(object) : (Optional<O>) Absent.INSTANCE;
+    }
+
+    @SuppressWarnings("unchecked")
     static public <O> Optional<O> absent() {
-        return new Optional<O>();
+        return (Optional<O>) Absent.INSTANCE;
     }
 
-    private final boolean available;
-    private final T object;
-
-    private Optional(final T object) {
-        this.available = true;
-        this.object = object;
-    }
-
-    private Optional() {
-        this.available = false;
-        this.object = null;
-    }
-
-    public boolean isPresent() {
-        return available;
-    }
-
-    public T get() {
-        if (available == false) {
-            throw new IllegalStateException("Optional object is not present"); //$NON-NLS-1$
+    // @CheckForNull or @Nonnull @Nullable or at some point
+    static private <T> void checkNotNull(final T object) {
+        if (object == null) {
+            throw new NullPointerException();
         }
-        return object;
     }
 
-    @Override
-    public String toString() {
-        return "Optional [available=" + available + ", object=" + object + "]"; //$NON-NLS-1$
-    }
+    public abstract boolean isPresent();
+
+    public abstract T get();
+
+    static private final class Present<T> extends Optional<T> {
+        private final T object;
+        protected Present(final T object) {
+            this.object = object;
+        }
+        @Override
+        public boolean isPresent() {
+            return true;
+        }
+        @Override
+        public T get() {
+            return object;
+        }
+    }// class
+
+    static private final class Absent extends Optional<Object> {
+        static final Absent INSTANCE = new Absent();
+        private Absent() {
+        }
+        @Override
+        public Object get() {
+            throw new IllegalStateException("Optional object is not present, get() can not be called"); //$NON-NLS-1$;
+        }
+        @Override
+        public boolean isPresent() {
+            return false;
+        }
+    }// class
 
 }// class
 
