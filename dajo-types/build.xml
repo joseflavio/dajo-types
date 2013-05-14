@@ -10,10 +10,11 @@
     <property name="tmp.dir" value="tmp"/>
 
     <!-- Dynamic properties -->
-    <buildnumber file="${ant.project.name}.number"/>
+    
     <tstamp>
         <format property="build.timeid" pattern="yyyyMMdd-hhmmss" timezone="UTC"/>
     </tstamp>
+    <buildnumber id="build.number" file="${ant.project.name}.number"/>
     <property name="build.id" value="${build.number}-${build.timeid}"/>
     <tstamp>
         <format property="jar.manifest.builtdate" pattern="yyyy-MM-dd HH:mm:ss" />
